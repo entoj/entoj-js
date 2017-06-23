@@ -32,6 +32,16 @@ Lints all source files
 npm run lint
 ```
 
+
+# Configuration
+
+## Environment configuration
+
+js.optimize: false
+js.minimize: false
+js.sourceMaps: false
+
+
 ---
 
 ### Licence
