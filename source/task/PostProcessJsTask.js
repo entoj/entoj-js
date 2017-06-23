@@ -122,11 +122,18 @@ class PostProcessJsTask extends TransformingTask
             try
             {
                 const result = uglifyJs.minify(file.contents.toString(), options);
-                resultFile = new VinylFile(
-                    {
-                        path: file.path,
-                        contents: new Buffer(result.code)
-                    });
+                if (result.code)
+                {
+                    resultFile = new VinylFile(
+                        {
+                            path: file.path,
+                            contents: new Buffer(result.code)
+                        });
+                }
+                else
+                {
+                    ErrorHandler.error(scope, result.error);
+                }
             }
             catch(e)
             {
