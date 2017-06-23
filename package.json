@@ -16,7 +16,8 @@
     "entoj-system": "https://github.com/entoj/entoj-system",
     "co": "*",
     "co-fs-extra": "*",
-    "eslint": "*"
+    "eslint": "*",
+    "uglify-js": "*"
   },
   "devDependencies": {
     "chai": "*",
