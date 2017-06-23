@@ -68,6 +68,21 @@ describe(PostProcessJsTask.className, function()
 
     describe('#stream()', function()
     {
+        it('should not touch files when no options are set', function()
+        {
+            const promise = co(function *()
+            {
+                const testee = new PostProcessJsTask(global.fixtures.cliLogger);
+                const data = yield taskSpec.readStream(testee.stream(global.fixtures.sourceStream,
+                    prepareBuildSettings({})));
+                for (const file of data)
+                {
+                    expect(file.contents.toString()).to.be.equal('/* add */function add(first, second) { a = 5; return first + second; }');
+                }
+            });
+            return promise;
+        });
+
         it('should inline source maps in all files when build configuration sourceMaps == true', function()
         {
             const promise = co(function *()

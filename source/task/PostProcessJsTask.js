@@ -86,6 +86,12 @@ class PostProcessJsTask extends TransformingTask
                 return false;
             }
 
+            // Nothing to do?
+            if (!params.minify && !params.optimize && !params.sourceMaps)
+            {
+                return file;
+            }
+
             // Start
             const work = scope.cliLogger.work('Processing file <' + file.path + '>');
             const options =
