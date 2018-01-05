@@ -98,6 +98,10 @@ class PostProcessJsTask extends TransformingTask
             {
                 compress: params.minify,
                 mangle: params.optimize,
+                output:
+                {
+                    beautify: !(params.minify || params.optimize)
+                },
                 warnings: true
             };
             if (params.optimize)
