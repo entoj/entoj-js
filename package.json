@@ -14,7 +14,7 @@
   "dependencies": {
     "co": "^4.6.0",
     "co-fs-extra": "^1.2.1",
-    "entoj-system": "^0.2.13",
+    "entoj-system": "^0.2.15",
     "uglify-js": "^3.3.10",
     "vinyl": "^2.1.0",
     "eslint": "^4.17.0"
