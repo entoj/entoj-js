@@ -1,6 +1,6 @@
 {
   "name": "entoj-js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "engines": {
     "node": ">= 6.x"
   },
@@ -17,7 +17,7 @@
     "entoj-system": "^0.2.13",
     "uglify-js": "^3.3.10",
     "vinyl": "^2.1.0",
-    "eslint": "^4.17.0"    
+    "eslint": "^4.17.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
