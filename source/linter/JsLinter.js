@@ -62,6 +62,15 @@ class JsLinter extends Linter
 
 
     /**
+     * @type {String}
+     */
+    get name()
+    {
+        return 'JS';
+    }
+
+
+    /**
      * @type {eslint}
      */
     get linter()
