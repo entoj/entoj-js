@@ -5,6 +5,7 @@
  * @ignore
  */
 const Linter = require('entoj-system').linter.Linter;
+const ContentKind = require('entoj-system').model.ContentKind;
 const CLIEngine = require('eslint/lib/cli-engine');
 
 
@@ -67,6 +68,15 @@ class JsLinter extends Linter
     get name()
     {
         return 'JS';
+    }
+
+
+    /**
+     * @type {String}
+     */
+    get contentKind()
+    {
+        return ContentKind.JS;
     }
 
 
