@@ -108,14 +108,13 @@ describe(PostProcessJsTask.className, function()
                 for (const file of data)
                 {
                     expect(file.contents.toString()).to.not.contain('/* add */');
-                    expect(file.contents.toString()).to.not.contain(';');
                     expect(file.contents.toString()).to.contain('first');
                 }
             });
             return promise;
         });
 
-        it('should minify all files when optimize == true', function()
+        it('should optimize all files when optimize == true', function()
         {
             const promise = co(function *()
             {
@@ -125,7 +124,6 @@ describe(PostProcessJsTask.className, function()
                 for (const file of data)
                 {
                     expect(file.contents.toString()).to.not.contain('/* add */');
-                    expect(file.contents.toString()).to.not.contain(';');
                     expect(file.contents.toString()).to.not.contain('first');
                 }
             });
