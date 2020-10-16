@@ -101,8 +101,7 @@ class PostProcessJsTask extends TransformingTask
                 output:
                 {
                     beautify: !(params.minify || params.optimize)
-                },
-                warnings: true
+                }
             };
             if (params.minify)
             {
@@ -179,8 +178,7 @@ class PostProcessJsTask extends TransformingTask
                     unsafe_proto: false,
                     unsafe_regexp: false,
                     unsafe_undefined: false,
-                    unused: false,
-                    warnings: false
+                    unused: false
                 };
 
                 // Enable specific plugins
